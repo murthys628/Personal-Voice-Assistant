@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "personal-voice-assistant"
+version = "0.1.0"
+description = "A small rule-based personal voice assistant"
+readme = "README.md"
+requires-python = ">=3.10"
+
+[project.optional-dependencies]
+voice = [
+    "SpeechRecognition>=3.10",
+    "pyttsx3>=2.90",
+]
+microphone = ["PyAudio>=0.2.11"]
+
+[tool.setuptools.packages.find]
+include = ["personal_voice_assistant*"]
